@@ -41,13 +41,13 @@ include_directories(
     .
     .
     /usr/include/qt6/
-    /usr/include/qt6/QCore
+    /usr/include/qt6/QtCore
 
 )
 
 
 # Compiler options
-add_definitions(-g -Wall)
+add_definitions(-g -Wall -std=c++17)
 
 # Linker options
 set(LINK_OPTIONS -O0)
@@ -71,7 +71,7 @@ set ( CXX_SRCS
 
 set_source_files_properties(
     ${CXX_SRCS} PROPERTIES COMPILE_FLAGS 
-    " -g -Wall")
+    " -g -Wall -std=c++17")
 
 if(WIN32)
     enable_language(RC)
