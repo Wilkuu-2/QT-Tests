@@ -1,0 +1,1 @@
+main	/store/Personal/QT-Tests/QT-Tests/main.cpp	/^int main(int argc, char* argv[])$/;"	function	line:5	signature:(int argc, char* argv[])	returns:int 
