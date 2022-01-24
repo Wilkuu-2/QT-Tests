@@ -40,8 +40,9 @@ find_package(Qt6 COMPONENTS Widgets REQUIRED)
 include_directories(
     .
     .
-    /usr/include/qt6/
-    /usr/include/qt6/QtCore
+    $(QT6INCL)
+    $(QT6INCL)/QtCore
+    $(QT6INCL)/QtWidgets
 
 )
 
@@ -66,7 +67,8 @@ link_directories(
 
 # Define the CXX sources
 set ( CXX_SRCS
-    ${CMAKE_CURRENT_LIST_DIR}/main.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/MainWindow.cpp
 )
 
 set_source_files_properties(
